@@ -1,101 +1,136 @@
+import { RiBattery2ChargeFill } from "react-icons/ri";
+import { FaWifi } from "react-icons/fa";
+import { FiTv } from "react-icons/fi";
+import { HiSpeakerWave } from "react-icons/hi2";
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const features = [
+    { feature: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, voluptatem.", icon: <RiBattery2ChargeFill className="w-6 h-6" /> },
+    { feature: "Seamless and fast Wi-Fi connectivity.", icon: <FaWifi className="w-6 h-6" /> },
+    { feature: "High-definition TV compatibility.", icon: <FiTv className="w-6 h-6" /> },
+    { feature: "Crystal clear audio with powerful speakers.", icon: <HiSpeakerWave className="w-6 h-6" /> },
+    { feature: "Advanced power management system.", icon: <RiBattery2ChargeFill className="w-6 h-6" /> },
+    { feature: "User-friendly interface for all users.", icon: <FaWifi className="w-6 h-6" /> },
+    { feature: "High-performance processing capabilities.", icon: <FiTv className="w-6 h-6" /> },
+    { feature: "Portable and lightweight design.", icon: <HiSpeakerWave className="w-6 h-6" /> },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <div className="min-h-screen flex flex-col items-center bg-[rgb(255,255,255)]">
+      {/* Title */}
+      <div className="text-center py-12">
+        <p className="text-4xl font-semibold leading-[43.84px] text-gray-800" style={{ fontFamily: "Noto Sans Lao SemiCondensed, sans-serif" }}>
+          Features
+        </p>
+      </div>
+
+      {/* Features Container */}
+      <div className="flex flex-col justify-center items-center w-full max-w-[825px]">
+        <div className="overflow-hidden w-full">
+          <div className="flex flex-col gap-4 overflow-y-auto scrollbar-none p-4 max-h-[580px] shadow-lg rounded-xl">
+            {features.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-4 p-4 shadow-md transition-all duration-300 transform bg-white border-2 border-gray-800 rounded-full "
+              >
+                {/* Icon */}
+                <div className="flex items-center justify-center w-16 h-16 bg-[rgb(83,188,94)] text-white rounded-full relative left-[-30px]">
+                  {item.icon}
+                </div>
+
+                {/* Feature Text */}
+                <p className="text-lg font-medium text-gray-800">{item.feature}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      {/* Additional Content (Text + Image) */}
+      <div className="mt-12 text-center px-4">
+        <p className="text-lg text-gray-700 mb-4">
+          Lorem ipsum dolor sit amet,. Facere, expedita.
+        </p>
+        <img src="/featureImage.png" alt="Feature" className="w-full max-w-[600px] rounded-lg shadow-md" />
+      </div>
+      
+      <p className="text-center underline py-5 font-semibold text-[rgb(83,188,94)]">Know more</p>
+
+      {/* Who is it for? Section */}
+      <div className="text-center py-12 px-4">
+        <p className="text-2xl font-semibold text-gray-800">Who is it for?</p>
+        <p className="text-lg text-gray-700 mt-4 mb-6">
+          This product is designed for tech enthusiasts, home entertainment
+        </p>
+      </div>
+
+      {/* Image Grid Section */}
+      <div className="w-full max-w-[1128px] px-5 md:px-5">
+        {/* First Row of Images (2 images) */}
+        <div className="flex flex-wrap gap-5 my-5">
+            
+        <div className="w-[736px] h-[550px] sm:h-[400px]">
+          <img src="/featureImage3.png" alt="Image 1" className="w-full h-full object-cover rounded-lg shadow-md" />
+        </div>
+        <div className="w-full md:w-[326px] h-[550px] sm:h-[400px]">
+          <img src="/featureImage2.png" alt="Image 2" className="w-full h-full object-cover rounded-lg shadow-md" />
+        </div>
+
+        </div>
+
+        {/* Second Row of Images (2 images) */}
+        <div className="flex flex-wrap gap-5 my-5">
+         
+        <div className="w-[736px] h-[281px] sm:h-[200px]">
+          <img src="/featureImage3.png" alt="Image 3" className="w-full h-full object-cover rounded-lg shadow-md" />
+        </div>
+        <div className="w-full md:w-[326px] h-[281px] sm:h-[200px]">
+          <img src="/featureImage4.png" alt="Image 4" className="w-full h-full object-cover rounded-lg shadow-md" />
+        </div>
+
+        </div>
+
+        {/* Third Row (1 Image Spanning 2 Columns) */}
+        <div className="w-full h-[214px] col-span-2">
+          <img src="/featureImage5.png" alt="Image 5" className="w-full h-full object-cover rounded-lg shadow-md" />
+        </div>
+      </div>
+
+      <p className="text-center underline py-5 font-semibold text-[rgb(83,188,94)]">Know more</p>
+      
+      {/* cross shape */}
+      <div 
+  className="w-full h-[880px] border-2 border-black mt-[100px]"
+>
+  <div 
+    className="h-[700px] border-2 flex bg-[url('https://tse3.mm.bing.net/th?id=OIP.ZwpSwAlHaczkzbFEKCKCVwHaEQ&pid=Api&P=0&h=180')] bg-cover bg-center filter  relative overflow-hidden "
+  >
+
+<div className="w-[420px] md:w-[820px] h-[300px] flex justify-center items-center relative top-52 md:left-[12%]">
+    <div className="w-[654px] h-[224px] bg-[rgb(255,242,188)] flex justify-center items-center px-5 rounded-sm">
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+    </div>
+</div>
+   
+   <Image src='/shapeInImage.png' 
+      width={430}
+      height={430}
+      className="absolute top-36 left-[60%] z-50"
+      style={{filter:"none"}}
+      />
+
+    {/* Isolated Shape Div */}
+    <div 
+      className="shape w-[486px] md:w-[786px] bg-[#172A44] bg-opacity-50 absolute right-0 top-0 h-full flex justify-center items-center z-[-10px]"
+      style={{ filter: "none" }}
+    >
+    </div>
+  </div>
+</div>
+
+
+
     </div>
   );
 }
