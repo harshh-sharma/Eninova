@@ -29,7 +29,7 @@ const Navbar = () => {
                   <AiFillHome size={24} />
                   <span>Home</span>
                 </Link>
-                <Link href="/products" className="text-[rgb(23,44,71)] hover:text-green-600 transition-colors duration-300">
+                <Link href="/Products" className="text-[rgb(23,44,71)] hover:text-green-600 transition-colors duration-300">
                   Products
                 </Link>
                 <Link href="/projects" className="text-[rgb(23,44,71)] hover:text-green-600 transition-colors duration-300">
