@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+/* Custom Shape Divider Bottom */
 .custom-shape-divider-bottom-1733130099 {
   position: absolute;
   bottom: 0;
@@ -16,13 +17,22 @@
   position: relative;
   display: block;
   width: calc(283% + 1.3px);
-  height: 278px;
-  
+  height: 200px;
 }
 
 .custom-shape-divider-bottom-1733130099 .shape-fill {
-  fill: rgb(145, 143, 143); 
+  fill: transparent; /* Make sure fill is transparent */
+  stroke: #53BC69; /* Stroke color */
+  stroke-width: 5; /* Adjust stroke width */
+  stroke-dasharray: 1000; /* Create a long dash to cover the full path */
+  stroke-dashoffset: 0; /* Start from the beginning of the path */
+  z-index: 10; /* Ensure stroke appears above the fill */
 }
+
+
+
+
+
 
 /* Hide scrollbar */
 .scrollbar-none::-webkit-scrollbar {
@@ -37,4 +47,32 @@
 .shape{
   clip-path: polygon(100% 0, 100% 51%, 100% 100%, 0% 100%, 43% 51%, 0% 0%);
 }
+
+/* Container for the carousel */
+/* Carousel container */
+.client-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Client names inside the carousel */
+.client-names {
+  display: flex;
+  flex-shrink: 0;
+}
+
+/* Style for each client name */
+.client-item {
+  margin: 0 30px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap; /* Ensure names don't wrap */
+}
+
+
+
+
+
 
