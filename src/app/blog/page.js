@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 
 const BlogCard = ({img,title,content}) => {
 
+ console.log(img,title,content);
  
   return (
     <div className="w-full max-w-[983px] h-auto md:h-[640px] flex flex-col justify-center items-center relative mx-auto my-5">
@@ -12,7 +13,7 @@ const BlogCard = ({img,title,content}) => {
         {/* Top Image */}
         <div className="w-[90%] max-w-[852px] h-auto md:h-[300px] absolute -top-16 md:-top-8">
           <img
-            src={img > 0 ? img :'/featureImage.png'}
+            src={img ? img :'/featureImage.png'}
             alt="feature"
             className="w-full h-full object-cover"
           />
