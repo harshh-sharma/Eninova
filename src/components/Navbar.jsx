@@ -50,13 +50,13 @@ const Navbar = () => {
 
               {/* Right Section */}
               <div className="hidden md:flex items-center gap-6">
-                <Link href="/about-us" className="text-[rgb(23,44,71)] hover:text-green-600 transition-colors duration-300">
+                <Link href="/about" className="text-[rgb(23,44,71)] hover:text-green-600 transition-colors duration-300">
                   About Us
                 </Link>
                 <Link href="/blog" className="text-[rgb(23,44,71)] hover:text-green-600 transition-colors duration-300">
                   Blog
                 </Link>
-                <Link href="/contact-us">
+                <Link href="/contact">
                   <button className="border-2 border-[rgb(23,44,71)] text-[rgb(23,44,71)] font-semibold py-2 px-4 rounded hover:bg-[rgb(83,188,105)] hover:text-white transition-all duration-300">
                     Contact Us
                   </button>
@@ -121,9 +121,9 @@ const Navbar = () => {
               <Link href="/" className="text-[rgb(23,44,71)] hover:text-green-600">Home</Link>
               <Link href="/products" className="text-[rgb(23,44,71)] hover:text-green-600">Products</Link>
               <Link href="/projects" className="text-[rgb(23,44,71)] hover:text-green-600">Projects</Link>
-              <Link href="/about-us" className="text-[rgb(23,44,71)] hover:text-green-600">About Us</Link>
+              <Link href="/about" className="text-[rgb(23,44,71)] hover:text-green-600">About Us</Link>
               <Link href="/blog" className="text-[rgb(23,44,71)] hover:text-green-600">Blog</Link>
-              <Link href="/contact-us">
+              <Link href="/contact">
                 <button className="border-2 border-[rgb(23,44,71)] text-[rgb(23,44,71)] font-semibold py-2 px-4 rounded hover:bg-[rgb(23,44,71)] hover:text-white transition-all duration-300">
                   Contact Us
                 </button>
