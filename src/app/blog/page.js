@@ -65,8 +65,7 @@ const Page = () => {
 
   useEffect(() => {
     loadContents();
-  },[])
-
+  },[]);
 
   return (
     <div className='flex flex-col'>
@@ -78,10 +77,26 @@ const Page = () => {
       
       {/* Adding spacing between BlogCards */}
      {
-      blogContent?.map(item => <BlogCard img={item?.contentImage?.secure_url} title={item?.title} content={item?.content} />)
+      blogContent?.map((item,index) => <BlogCard key={index} img={item?.contentImage?.secure_url} title={item?.title} content={item?.content} />) 
+    }
+
+    {
+      blogContent?.length == 0 && <>
+      <BlogCard/>
+      <BlogCard/>
+      <BlogCard/>
+      <BlogCard/>
+      <BlogCard/>
+      <BlogCard/>
+      </>
     }
       
     </div>
+
+    <div className='w-full h-[1732px] border-2 border-black'>
+        <h1>Stay Connected</h1>
+    </div>
+
     </div>
   )
 }
