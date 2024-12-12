@@ -3,7 +3,7 @@ import { FaWifi } from "react-icons/fa";
 import { FiTv } from "react-icons/fi";
 import { HiSpeakerWave } from "react-icons/hi2";
 import Image from "next/image";
-import ClientCarousel from "../components/client";
+import ClientCarousel from "../components/Client";
 import OurExperts from "../components/Experts";
 import Contact from "../components/Contact";
 import GetInTouch from "../components/GetInTouch";

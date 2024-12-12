@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* Custom Shape Divider Bottom */
 .custom-shape-divider-bottom-1733130099 {
   position: absolute;
   bottom: 0;
@@ -48,22 +46,44 @@
   clip-path: polygon(100% 0, 100% 51%, 100% 100%, 0% 100%, 43% 51%, 0% 0%);
 }
 
+
 /* Container for the carousel */
-/* Carousel container */
-.client-carousel-container {
+.client-carousel-containers{
   width: 100%;
-  overflow: hidden;
-  position: relative;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
 }
 
-/* Client names inside the carousel */
-.client-names {
+/* Heading */
+.carousel-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Style for the carousel */
+.client-carousels{
+  width: 100%;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  white-space: nowrap;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: red;
+  position: relative;
+  margin: 10px 0px;
+}
+
+/* Container for client names */
+.client-name{
   display: flex;
   flex-shrink: 0;
+  color: white;
 }
 
-/* Style for each client name */
-.client-item {
+/* Style for each client item */
+.client-item{
   margin: 0 30px;
   font-size: 1.25rem;
   font-weight: 600;
@@ -71,6 +91,15 @@
   white-space: nowrap; /* Ensure names don't wrap */
 }
 
+/* Add animation to scroll the items */
+@keyframes scroll-left{
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 
 
