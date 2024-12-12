@@ -74,28 +74,33 @@ const Contact = () => {
 
         {/* Images */}
         <div
-          className="flex transition-transform duration-500"
-          style={{
-            width: `${(270 * visibleItems)}px`, // Dynamically adjust width based on visible items
-            transform: `translateX(-${(currentIndex * 100) / visibleItems}%)`,
-          }}
-        >
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className="w-[270px] sm:w-[300px] lg:w-[270px] h-[400px] flex-shrink-0 mx-2 rounded-md shadow-md"
-              style={{
-                flex: `0 0 ${(100 / visibleItems)}%`, // Adjust the size of each image dynamically
-              }}
-            >
-              <img
-                src={image}
-                alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover rounded-md"
-              />
-            </div>
-          ))}
-        </div>
+  className="flex transition-transform duration-500"
+  style={{
+    width: `${270 * visibleItems}px`, // Dynamically adjust width based on visible items
+    transform: `translateX(-${(currentIndex * 100) / visibleItems}%)`,
+  }}
+>
+  {images.map((image, index) => (
+    <div
+      key={index}
+      className="relative w-[270px] sm:w-[300px] lg:w-[270px] h-[400px] flex-shrink-0 mx-2 rounded-3xl hover:rounded-none shadow-xl overflow-hidden group hover:scale-105"
+      style={{
+        flex: `0 0 ${(100 / visibleItems)}%`, // Adjust the size of each image dynamically
+      }}
+    >
+      <img
+        src={image}
+        alt={`Slide ${index + 1}`}
+        className="w-full h-full object-cover rounded-md"
+      />
+      {/* Text overlay */}
+      <div className="absolute bottom-0 left-0 w-full bg-transparent bg-opacity-70 text-white text-center p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+        <p><span className="font-bold">Lorem ipsum dolor sit amet  </span> adipisicing elit. Molestiae, fuga! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, ad!,Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, fuga! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, ad!</p>
+      </div>
+    </div>
+  ))}
+</div>
+
 
         {/* Right Arrow */}
         <button

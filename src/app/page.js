@@ -102,14 +102,11 @@ export default function Home() {
 
 
       {/* Additional Content (Text + Image) */}
-      <div className="mt-12 text-center px-4">
-        <p className="text-lg text-gray-700 mb-4">
-          Lorem ipsum dolor sit amet,. Facere, expedita.
-        </p>
-        <img
+      <div className="flex justify-center w-full items-center ">
+      <img
           src="/featureImage.png"
           alt="Feature"
-          className="w-full max-w-[600px] rounded-lg shadow-md"
+          className="w-full max-w-[75%] rounded-lg hover:rounded-none hover:scale-105 ease-in-out duration-200 shadow-md"
         />
       </div>
 
@@ -127,51 +124,62 @@ export default function Home() {
 
       {/* Image Grid Section */}
       <div className="w-full max-w-[1128px] px-5 md:px-5">
-        {/* First Row of Images (2 images) */}
-        <div className="flex flex-wrap gap-5 my-5">
-          <div className="w-[736px] h-[550px] sm:h-[400px]">
-            <img
-              src="/featureImage3.png"
-              alt="Image 1"
-              className="w-full h-full object-cover rounded-lg shadow-md"
-            />
-          </div>
-          <div className="w-full md:w-[326px] h-[550px] sm:h-[400px]">
-            <img
-              src="/featureImage2.png"
-              alt="Image 2"
-              className="w-full h-full object-cover rounded-lg shadow-md"
-            />
-          </div>
-        </div>
+  {/* First Row of Images (2 images) */}
+  <div className="flex flex-wrap gap-5 my-5 group relative">
+    {/* First Div */}
+    <div className="w-[736px] h-[550px] border-2 border-black sm:h-[400px] transition-all duration-300 group-hover:w-[326px] group-hover:h-[550px] hover:w-[736px] hover:h-[550px]">
+      <img
+        src="/featureImage3.png"
+        alt="Image 1"
+        className="w-full h-full object-cover rounded-lg shadow-md"
+      />
+    </div>
 
-        {/* Second Row of Images (2 images) */}
-        <div className="flex flex-wrap gap-5 my-5">
-          <div className="w-[736px] h-[281px] sm:h-[200px]">
-            <img
-              src="/featureImage3.png"
-              alt="Image 3"
-              className="w-full h-full object-cover rounded-lg shadow-md"
-            />
-          </div>
-          <div className="w-full md:w-[326px] h-[281px] sm:h-[200px]">
-            <img
-              src="/featureImage4.png"
-              alt="Image 4"
-              className="w-full h-full object-cover rounded-lg shadow-md"
-            />
-          </div>
-        </div>
+    {/* Second Div */}
+    <div className="w-full md:w-[326px] h-[550px] sm:h-[400px] transition-all duration-300 group-hover:w-[736px] group-hover:h-[550px] hover:w-[736px] hover:h-[550px]">
+      <img
+        src="/featureImage2.png"
+        alt="Image 2"
+        className="w-full h-full object-cover rounded-lg shadow-md"
+      />
+    </div>
+  </div>
 
-        {/* Third Row (1 Image Spanning 2 Columns) */}
-        <div className="w-full h-[214px] col-span-2">
-          <img
-            src="/featureImage5.png"
-            alt="Image 5"
-            className="w-full h-full object-cover rounded-lg shadow-md"
-          />
-        </div>
-      </div>
+  {/* Second Row of Images (2 images) */}
+  <div className="flex flex-wrap gap-5 my-5 group relative">
+    {/* First Div */}
+    <div className="w-[736px] h-[281px] sm:h-[200px] transition-all duration-300 group-hover:w-[736px] group-hover:h-[281px] hover:w-[736px] hover:h-[281px]">
+      <img
+        src="/featureImage3.png"
+        alt="Image 3"
+        className="w-full h-full object-cover rounded-lg shadow-md"
+      />
+    </div>
+
+    {/* Second Div */}
+    <div className="w-full md:w-[326px] h-[281px] sm:h-[200px] transition-all duration-300  hover:w-[736px] hover:h-[281px]">
+      <img
+        src="/featureImage4.png"
+        alt="Image 4"
+        className="w-full h-full object-cover rounded-lg shadow-md"
+      />
+    </div>
+  </div>
+
+  {/* Third Row (1 Image Spanning 2 Columns) */}
+  <div className="w-full h-[214px] col-span-2 group">
+    <div className="w-full h-[214px] transition-all duration-300 group-hover:h-[300px]">
+      <img
+        src="/featureImage5.png"
+        alt="Image 5"
+        className="w-full h-full object-cover rounded-lg shadow-md"
+      />
+    </div>
+  </div>
+</div>
+
+
+
 
       <p className="text-center underline py-5 font-semibold text-[rgb(83,188,94)]">
         Know more
@@ -374,7 +382,7 @@ export default function Home() {
   </div>
 
   {/* Image Section */}
-  <div className="w-full max-w-[400px] h-[300px] sm:h-[350px] md:h-[400px] bg-[url('/groupImg.png')] bg-cover bg-center"></div>
+  <div className="w-full max-w-[400px] h-[300px] sm:h-[350px] md:h-[400px] bg-[url('/groupImg.png')] bg-cover bg-center rounded-2xl hover:rounded-none hover:scale-105 transition-all ease-in-out duration-100"></div>
 </div>
 
 
