@@ -56,11 +56,11 @@ const Contact = () => {
       </h1>
 
       {/* Reviews Section */}
-      <div className="text-center my-10">
+      {/* <div className="text-center my-10">
         <h2 className="text-[24px] sm:text-[32px] font-semibold text-gray-800">
           Reviews
         </h2>
-      </div>
+      </div> */}
 
       {/* Carousel */}
       <div className="relative w-full h-auto flex items-center justify-center overflow-hidden">

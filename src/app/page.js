@@ -197,7 +197,7 @@ export default function Home() {
               className="w-full h-full object-cover rounded-lg shadow-md"
             />
             {/* Hover Effect */}
-            <div className="absolute inset-0 flex pl-10 bg-gradient-to-t from-gray-100/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg flex-col justify-center items-start">
+            <div className="absolute inset-0 flex pl-10 bg-gradient-to-r from-[#ffffff] to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg flex-col justify-center items-start">
               <p className="text-[#172A44] text-3xl font-semibold mb-5">
                 Businesses
               </p>
@@ -232,7 +232,7 @@ export default function Home() {
               className="w-full h-full object-cover rounded-lg shadow-md"
             />
             {/* Hover Effect */}
-            <div className="absolute inset-0 flex pl-10 bg-gradient-to-t from-gray-100/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg flex-col justify-center items-start">
+            <div className="absolute inset-0 flex pl-10 bg-gradient-to-r from-[#ffffff] to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg flex-col justify-center items-start">
               <p className="text-[#172A44] text-4xl font-bold mb-5">
                 Rural Communities
               </p>
@@ -247,7 +247,7 @@ export default function Home() {
               className="w-full h-full object-cover rounded-lg shadow-md"
             />
             {/* Hover Effect */}
-            <div className="absolute inset-0 flex pl-10 bg-gradient-to-t from-gray-100/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg flex-col justify-center items-start">
+            <div className="absolute inset-0 flex pl-10 bg-gradient-to-r from-[#ffffff] to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg flex-col justify-center items-start">
               <p className="text-[#172A44] text-4xl font-bold mb-5">
                 Pilgriimage Trusts
               </p>
@@ -264,7 +264,7 @@ export default function Home() {
               className="w-full h-full object-cover rounded-lg shadow-md"
             />
             {/* Hover Effect */}
-            <div className="absolute inset-0 flex pl-10 bg-gradient-to-l from-[#ffffff] to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg flex-col justify-center items-start">
+            <div className="absolute inset-0 flex pl-10 bg-gradient-to-r from-[#ffffff] to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg flex-col justify-center items-start">
               <p className="text-[#172A44] text-4xl font-bold mb-5">
                 Corporate Social Responsibility
               </p>
@@ -278,7 +278,7 @@ export default function Home() {
       </p>
 
       {/* cross shape */}
-      <div className="w-full h-[700px]  mt-[100px]">
+      {/* <div className="w-full h-[700px]  mt-[100px]">
         <div className="h-[700px] flex bg-[url('https://tse3.mm.bing.net/th?id=OIP.ZwpSwAlHaczkzbFEKCKCVwHaEQ&pid=Api&P=0&h=180')] bg-cover bg-center filter  relative overflow-hidden ">
           <div className="w-[420px] md:w-[820px] h-[300px] flex justify-center items-center relative top-52 md:left-[12%]">
             <div className="w-[654px] h-[224px] bg-[rgb(255,242,188)] flex justify-center items-center px-5 rounded-sm">
@@ -305,7 +305,7 @@ export default function Home() {
           </span>
 
           {/* Isolated Shape Div */}
-          <div
+          {/* <div
             className="shape w-[486px] md:w-[786px] bg-[#172A44] bg-opacity-50 absolute right-0 top-0 h-full flex justify-center items-center z-[-10px]"
             style={{ filter: "none" }}
           ></div>
@@ -327,12 +327,12 @@ export default function Home() {
               </button>
             </div>
           </div>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */} 
 
       {/* green container */}
       <div
-        className="w-full h-auto relative pt-[100px] md:pt-[250px]"
+        className="w-full h-auto relative pt-[5px] "
         style={{
           background: `
     radial-gradient(126.28% 126.28% at 50% 50%, #53BC69 0%, #265630 100%),
@@ -340,9 +340,9 @@ export default function Home() {
   `,
         }}
       >
-        <div className="w-full max-w-[1280px] h-auto flex justify-center items-center flex-col mx-auto px-4">
+        <div className="w-full max-w-[1280px] h-auto pb-10 flex justify-center items-center flex-col mx-auto px-4">
           {/* Title Section */}
-          <div className="w-full max-w-[920px] h-auto text-center mb-10">
+          <div className="w-full max-w-[920px] h-auto text-center mb-5">
             <h1
               className="text-[36px] md:text-[48px] lg:text-[60px] text-white leading-tight"
               style={{
@@ -352,68 +352,70 @@ export default function Home() {
             >
               Conventional Vs Our Products
             </h1>
-            <p className="mt-4 text-white font-[300] text-[18px] md:text-[24px] lg:text-[32px] leading-[1.5]">
+            <p className="text-white font-[300] text-[18px] md:text-[24px] lg:text-[32px] leading-[1.5]">
               Lorem ipsum dolor sit amet consectetur{" "}
               <span className="font-[500]">,</span>
             </p>
           </div>
 
           {/* Image Section */}
-          <div className="h-[200px] sm:h-[300px] md:h-[500px] lg:h-[731px] w-full bg-[url('/greenImage.png')] bg-cover bg-center"></div>
+          <div className="h-[200px] sm:h-[300px] md:h-[500px] lg:h-[511px] w-full bg-[url('/greenImage.png')] bg-cover bg-center rounded-md"></div>
+           
+          <h1 className='text-4xl font-bold text-center leading-[56px] text-white mt-[5px] pt-[10px]'>Our Clients</h1>
         </div>
 
+        <ClientCarousel />
+
         {/* Expert Opinion Section */}
-        <div className="w-full flex justify-center mt-[50px] px-4">
-          <div className="w-full max-w-[1159px] h-auto flex flex-col justify-center items-center">
+        {/* <div className="w-full flex justify-center mt-[50px] px-4">
+          <div className="w-full max-w-[1159px] h-auto flex flex-col justify-center items-center"> */}
             {/* Title */}
-            <div className="w-full max-w-[920px] h-auto text-center mb-10">
+            {/* <div className="w-full max-w-[920px] h-auto text-center mb-10">
               <h1 className="text-[36px] md:text-[48px] lg:text-[60px] font-semibold text-white leading-tight">
                 Expert Opinion
               </h1>
               <p className="mt-4 text-white font-semibold text-[18px] md:text-[24px] lg:text-[32px] leading-[1.5]">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
-            </div>
+            </div> */}
 
             {/* Image Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-5"> */}
               {/* Row 1 */}
-              <div className="h-[200px] sm:h-[240px] md:h-[320px] w-full flex justify-center items-center">
+              {/* <div className="h-[200px] sm:h-[240px] md:h-[320px] w-full flex justify-center items-center">
                 <img
                   src="/expertOpinion1.png"
                   alt="Image 1"
                   className="object-cover w-full h-full rounded-md"
                 />
-              </div>
-              <div className="h-[200px] sm:h-[240px] md:h-[320px] w-full flex justify-center items-center">
+              </div> */}
+              {/* <div className="h-[200px] sm:h-[240px] md:h-[320px] w-full flex justify-center items-center">
                 <img
                   src="/expertOpinion2.png"
                   alt="Image 2"
                   className="object-cover w-full h-full rounded-md"
                 />
-              </div>
+              </div> */}
 
               {/* Row 2 */}
-              <div className="h-[200px] sm:h-[240px] md:h-[320px] w-full flex justify-center items-center">
+              {/* <div className="h-[200px] sm:h-[240px] md:h-[320px] w-full flex justify-center items-center">
                 <img
                   src="/expertOpinion3.png"
                   alt="Image 3"
                   className="object-cover w-full h-full rounded-md"
                 />
-              </div>
-              <div className="h-[200px] sm:h-[240px] md:h-[320px] w-full flex justify-center items-center">
+              </div> */}
+              {/* <div className="h-[200px] sm:h-[240px] md:h-[320px] w-full flex justify-center items-center">
                 <img
                   src="/expertOpinion4.png"
                   alt="Image 4"
                   className="object-cover w-full h-full rounded-md"
                 />
-              </div>
-            </div>
-          </div>
-        </div>
+              </div> */}
+            {/* </div> */}
+          {/* </div> */}
+        {/* </div> */}
       </div>
-
-      <ClientCarousel />
 
       {/* another component */}
       <div className="w-full max-w-[90%] lg:max-w-[1303px] mx-auto h-auto flex flex-col">
