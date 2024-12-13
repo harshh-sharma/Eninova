@@ -88,8 +88,8 @@ export default function Home() {
 
       {/* <div className="w-[1068px] h-[638px] gap-5 opacity-0 flex"> */}
       <div className="items-center justify-center flex-wrap  w-[1068px] h-[550px] flex gap-[30px] ">
-  {features?.map(item => <div className="group relative flex justify-center items-center ">
-       <CircleBoxAnimation feature={item?.feature} icon={item?.icon}/>   
+  {features?.map((item,index) => <div className="group relative flex justify-center items-center ">
+       <CircleBoxAnimation key={index} feature={item?.feature} icon={item?.icon}/>   
   </div>)}
 </div>
       {/* </div> */}
