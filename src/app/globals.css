@@ -47,60 +47,27 @@
 }
 
 
-/* Container for the carousel */
-.client-carousel-containers{
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-  background-color: #f8f8f8;
-}
-
-/* Heading */
-.carousel-heading {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-/* Style for the carousel */
-.client-carousels{
-  width: 100%;
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-  white-space: nowrap;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: red;
-  position: relative;
-  margin: 10px 0px;
-}
-
-/* Container for client names */
-.client-name{
-  display: flex;
-  flex-shrink: 0;
-  color: white;
-}
-
-/* Style for each client item */
-.client-item{
-  margin: 0 30px;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #fff;
-  white-space: nowrap; /* Ensure names don't wrap */
-}
-
-/* Add animation to scroll the items */
-@keyframes scroll-left{
-  0% {
+@keyframes slide {
+  from{
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(-100%);
+  to{
+    transform: translateX(-20%);
   }
 }
 
+.logos{
+  overflow: hidden;
+  /* background-color: red; */
+
+}
+
+.logos-slide{
+  white-space: nowrap;
+  display: flex;
+  animation: 5s slide infinite linear;
+  padding: 0px 10px;
+}
 
 
 

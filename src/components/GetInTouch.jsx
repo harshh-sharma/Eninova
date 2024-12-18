@@ -60,9 +60,11 @@ const GetInTouch = () => {
     className="w-full max-w-[958px] h-[264px] bg-[url('/locationImage.png')] bg-cover bg-center"
   ></div>
 
-<button className="w-full sm:max-w-[300px] md:max-w-[335px] h-[82px] border-4 border-[#172A44] my-7 text-center text-[#172A44] text-[20px] font-[600px] leading-[32.9px] hover:bg-[#172A44] hover:text-white transition-all duration-300">
+<button className="w-full sm:max-w-[300px] md:max-w-[335px] h-[82px] border-4 border-[#172A44] my-7 text-center text-[#172A44] text-[20px] font-[600] leading-[32.9px] hover:bg-gradient-to-r hover:from-[#53BC69] hover:to-[#0A745F] hover:text-white hover:border-none transition-all duration-300">
   Know more
 </button>
+
+
 
 </div>
 

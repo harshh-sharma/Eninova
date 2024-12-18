@@ -9,146 +9,40 @@ import Contact from "../components/Contact";
 import GetInTouch from "../components/GetInTouch";
 import LastComp from "../components/LastComp";
 import Box from "@/components/Box";
-
-
-function CircleBoxAnimation({feature,icon}) {
-  return (
-    <div className="relative w-[192px] h-[196px] flex justify-center items-center">
-      {/* Circle */}
-      <div
-  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform rounded-full transition-all duration-500 group-hover:top-10 group-hover:-translate-y-1/5 z-[100] w-[140px] h-[140px] hover:h-[60px] group-hover:h-[100px] group-hover:w-[100px] group-hover:right-[60px] flex justify-center items-center border-[5px] group-hover:border-[0px] border-[#172A44]"
-  style={{
-    background: 'radial-gradient(56.79% 56.79% at 50% 50%, #8BF2A1 0%, #53BC69 54.01%, #0A745F 100%)',
-  }}
->
-  {icon}
-</div>
-
-
-      {/* Box */}
-      <div className="absolute top-[45px] left-0 h-0 w-[180px] overflow-hidden group-hover:border-[4px] border-[#172A44] transition-all duration-500 group-hover:h-[120px] group-hover:rounded-xl flex justify-center items-center pt-[5px]">
-        <p className="text-xl font-bold text-[#172A44] text-center">{feature}</p>
-      </div>
-    </div>
-  );
-}
-
+import Features from "@/components/Features";
+import OurPartnerShip from "@/components/OurPartnerShip";
 
 export default function Home() {
-  const features = [
-    {
-      feature:
-        "Lorem ipsum dolor sit",
-        icon: <RiBattery2ChargeFill className="w-[57px] h-[52px] text-white" />,
-    },
-    {
-      feature:
-        "Lorem ipsum dolor sit",
-        icon: <RiBattery2ChargeFill className="w-[57px] h-[52px] text-white" />,
-    },
-    {
-      feature: "Lorem ipsum dolor sit",
-      icon: <FaWifi className="w-[57px] h-[52px] text-white" />,
-    },
-    {
-      feature: "Lorem ipsum dolor sit",
-      icon: <FiTv className="w-[57px] h-[52px] text-white" />,
-    },
-    {
-      feature: "Lorem ipsum dolor sit",
-      icon: <HiSpeakerWave className="w-[57px] h-[52px] text-white" />,
-    },
-    {
-      feature: "Lorem ipsum dolor sit",
-      icon: <RiBattery2ChargeFill className="w-[57px] h-[52px] text-white" />,
-    },
-    {
-      feature: "Lorem ipsum dolor sit",
-      icon: <FaWifi className="w-[57px] h-[52px] text-white" />,
-    },
-    {
-      feature: "Lorem ipsum dolor sit",
-      icon: <FiTv className="w-[57px] h-[52px] text-white" />,
-    }
-  ];
-
   return (
     <div className="min-h-screen flex flex-col items-center bg-[rgb(255,255,255)]">
       {/* Title */}
-
-      {/* features section */}
-      <div className="text-center py-12">
-        <p
-          className="text-4xl font-semibold leading-[43.84px] text-gray-800"
-          style={{ fontFamily: "Noto Sans Lao SemiCondensed, sans-serif" }}
-        >
-          Features
-        </p>
-      </div>
-
-      {/* <div className="w-[1068px] h-[638px] gap-5 opacity-0 flex"> */}
-      <div className="items-center justify-center flex-wrap  w-[1068px] h-[550px] flex gap-[30px] ">
-  {features?.map((item,index) => <div key={index} className="group relative flex justify-center items-center ">
-       <CircleBoxAnimation  feature={item?.feature} icon={item?.icon}/>   
-  </div>)}
-</div>
-      {/* </div> */}
-
-      {/* Features Container */}
-
-      {/* <div
-  className="w-full md:w-[1440px] h-[633px] flex justify-center items-center"
-  style={{
-    background: "linear-gradient(180deg, #FFFFFF 5%, rgba(255, 255, 255, 0) 23.4%, rgba(255, 255, 255, 0) 80.4%, #FFFFFF 95%)",
-  }}
->
-  <div className="relative w-full md:w-[825px] h-[580px] overflow-y-auto scrollbar-none">
-    {/* Top Blur */}
-      {/* <div className="absolute top-0 left-0 w-full h-[100px] bg-gradient-to-b from-white via-white/90 to-transparent pointer-events-none z-10"></div> */}
-
-      {/* Scrollable Content */}
-      {/* <div className="relative w-full h-full overflow-y-auto scrollbar-none">
-      {features?.map((item, index) => (
-        <div
-          key={index}
-          className="w-full md:w-[825px] h-[120px] flex justify-center items-center rounded-[30px] mb-4"
-        >
-          <div className="w-full md:w-[763px] h-[91px] border-2 border-[#182C47] rounded-[30px] flex justify-center items-center">
-            <div className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-[rgb(83,188,94)] text-white rounded-full relative left-[-35px]">
-              {item.icon}
-            </div>
-            <div className="w-[666px] h-[49px] px-4">
-              <p className="text-[16px] sm:text-[20px] leading-[24.76px] font-[600] text-[#182C47]">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde molestias mollitia cupiditate optio odio sapiente!
-              </p>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div> */}
-
-      {/* Bottom Blur */}
-      {/* <div className="absolute bottom-0 left-0 w-full h-[150px] bg-gradient-to-t from-white via-white/90 to-transparent pointer-events-none z-10"></div>
-  </div> */}
-      {/* </div> */}
+      <Features />
 
       {/* Additional Content (Text + Image) */}
-      <div className="flex justify-center w-full items-center ">
-        <img
-          src="/featureImage.png"
-          alt="Feature"
-          className="w-full max-w-[75%] rounded-lg hover:rounded-none hover:scale-105 ease-in-out duration-200 shadow-md"
-        />
+      <div className="flex justify-center w-full items-center">
+        <div className="relative w-full max-w-[75%]">
+          <img
+            src="/featureImage.png"
+            alt="Feature"
+            className="w-full rounded-lg hover:rounded-none hover:scale-105 transition-transform ease-in-out duration-200 shadow-md"
+          />
+          <div className="absolute bottom-4 right-4  text-white p-4 rounded-lg w-[85%] md:w-[348px] h-auto">
+            <p className="text-[16px] sm:text-[18px] md:text-[20px] font-semibold leading-tight">
+              Lorem ipsum dolor sit amet{" "}
+              <span className="underline cursor-pointer hover:text-gray-300 whitespace-nowrap">
+                Read more...
+              </span>
+            </p>
+          </div>
+        </div>
       </div>
 
-      <p className="text-center underline py-5 font-semibold text-[rgb(83,188,94)]">
-        Know more
-      </p>
-
       {/* Who is it for? Section */}
-      <div className="text-center py-12 px-4">
-        <p className="text-2xl font-semibold text-gray-800">Who is it for?</p>
-        <p className="text-lg text-gray-700 mt-4 mb-6">
+      <div className="text-center pt-5 px-4">
+        <p className="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] font-semibold text-[#172A44]">
+          Who is it for?
+        </p>
+        <p className="text-[18px] sm:text-[22px] md:text-[28px] lg:text-[32px] text-[#172A44] mt-4">
           This product is designed for tech enthusiasts, home entertainment
         </p>
       </div>
@@ -225,7 +119,7 @@ export default function Home() {
         {/* Second Row of Images (2 images) */}
         <div className="flex flex-wrap gap-5 my-5 group relative">
           {/* First Div */}
-          <div className="relative w-[736px] h-[281px] sm:h-[200px] transition-all duration-300 group-hover:w-[326px] group-hover:h-[281px] hover:w-[736px] hover:h-[281px]">
+          <div className="relative w-[736px] h-[281px] sm:h-[281px] transition-all duration-300 group-hover:w-[326px] group-hover:h-[281px] hover:w-[736px] hover:h-[281px]">
             <img
               src="/featureImage3.png"
               alt="Image 3"
@@ -240,7 +134,7 @@ export default function Home() {
           </div>
 
           {/* Second Div */}
-          <div className="relative w-full md:w-[326px] h-[281px] sm:h-[200px] transition-all duration-300 hover:w-[736px] hover:h-[281px]">
+          <div className="relative w-full md:w-[326px] h-[281px] sm:h-[281px] transition-all duration-300 hover:w-[736px] hover:h-[281px]">
             <img
               src="/featureImage4.png"
               alt="Image 4"
@@ -277,74 +171,21 @@ export default function Home() {
         Know more
       </p>
 
-      {/* cross shape */}
-      {/* <div className="w-full h-[700px]  mt-[100px]">
-        <div className="h-[700px] flex bg-[url('https://tse3.mm.bing.net/th?id=OIP.ZwpSwAlHaczkzbFEKCKCVwHaEQ&pid=Api&P=0&h=180')] bg-cover bg-center filter  relative overflow-hidden ">
-          <div className="w-[420px] md:w-[820px] h-[300px] flex justify-center items-center relative top-52 md:left-[12%]">
-            <div className="w-[654px] h-[224px] bg-[rgb(255,242,188)] flex justify-center items-center px-5 rounded-sm">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident
-              </p>
-            </div>
-          </div>
-
-          <Image
-            src="/shapeInImage.png"
-            width={430}
-            height={430}
-            className="absolute top-36 left-[60%] z-50"
-            style={{ filter: "none" }}
-          />
-          <span className="bg-white text-[#182C47] absolute bottom-40 right-[200px] z-[500] px-5 py-2 border-[3px] border-[#182C47] rounded-[7px] text-[20px] font-[600]">
-            Know more
-          </span>
-
-          {/* Isolated Shape Div */}
-          {/* <div
-            className="shape w-[486px] md:w-[786px] bg-[#172A44] bg-opacity-50 absolute right-0 top-0 h-full flex justify-center items-center z-[-10px]"
-            style={{ filter: "none" }}
-          ></div>
-        </div>
-
-        <div className="w-full max-w-[90%] md:max-w-[820px] h-auto flex flex-col justify-center items-center mx-auto my-10 relative -mt-12 md:-mt-24 z-20 bg-[#86BEED] border-[2px] md:border-[4px] border-[#172A44] rounded-md shadow-lg">
-          <div className="w-full px-5 py-8">
-            <p className="text-[20px] md:text-[28px] lg:text-[32px] font-bold text-center text-[#172A44] mb-4">
-              Lorem ipsum dolor sit amet.
-            </p>
-            <p className="text-[14px] sm:text-[16px] md:text-[20px] font-medium leading-relaxed text-center text-[#172A44]">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae
-              voluptas ipsum ullam exercitationem cupiditate sapiente error eum
-              sunt eos at.
-            </p>
-            <div className="flex justify-center items-center mt-6">
-              <button className="bg-white px-6 md:px-10 py-4 md:py-5 text-[16px] md:text-[20px] lg:text-[22px] font-semibold border-[2px] md:border-[3px] rounded-md border-[#172A44] hover:bg-[#172A44] hover:text-white transition-all">
-                Connect with us
-              </button>
-            </div>
-          </div>
-        </div> */}
-      {/* </div> */} 
-
       {/* green container */}
       <div
-        className="w-full h-auto relative pt-[5px] "
+        className="w-full h-auto relative mt-[10px] bg-gradient-to-b from-[#265630] to-[#53BC69] bg-opacity-90"
         style={{
           background: `
-    radial-gradient(126.28% 126.28% at 50% 50%, #53BC69 0%, #265630 100%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0) 54.54%, #FFFFFF 100%)
-  `,
+      radial-gradient(126.28% 126.28% at 50% 50%, #265630 0%, #53BC69 100%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, #FFFFFF 100%)
+    `,
         }}
       >
         <div className="w-full max-w-[1280px] h-auto pb-10 flex justify-center items-center flex-col mx-auto px-4">
           {/* Title Section */}
-          <div className="w-full max-w-[920px] h-auto text-center mb-5">
+          <div className="w-full max-w-[920px] h-auto text-center mb-10">
             <h1
-              className="text-[36px] md:text-[48px] lg:text-[60px] text-white leading-tight"
+              className="text-[36px] md:text-[48px] lg:text-[60px] text-white leading-tight font-semibold"
               style={{
                 fontFamily: "Noto Sans Lao SemiCondensed",
                 textUnderlinePosition: "from-font",
@@ -352,103 +193,27 @@ export default function Home() {
             >
               Conventional Vs Our Products
             </h1>
-            <p className="text-white font-[300] text-[18px] md:text-[24px] lg:text-[32px] leading-[1.5]">
+            <p className="text-white font-light text-[18px] md:text-[24px] lg:text-[32px] leading-[1.5] mt-4">
               Lorem ipsum dolor sit amet consectetur{" "}
-              <span className="font-[500]">,</span>
+              <span className="font-semibold">,</span>
             </p>
           </div>
 
           {/* Image Section */}
-          <div className="h-[200px] sm:h-[300px] md:h-[500px] lg:h-[511px] w-full bg-[url('/greenImage.png')] bg-cover bg-center rounded-md"></div>
-           
-          <h1 className='text-4xl font-bold text-center leading-[56px] text-white mt-[5px] pt-[10px]'>Our Clients</h1>
-        </div>
+          <div className="h-[200px] sm:h-[300px] md:h-[500px] lg:h-[511px] w-full bg-[url('/greenImage.png')] bg-cover bg-center rounded-xl shadow-xl transition-all transform hover:scale-105 duration-300 ease-in-out"></div>
 
-        <ClientCarousel />
-
-        {/* Expert Opinion Section */}
-        {/* <div className="w-full flex justify-center mt-[50px] px-4">
-          <div className="w-full max-w-[1159px] h-auto flex flex-col justify-center items-center"> */}
-            {/* Title */}
-            {/* <div className="w-full max-w-[920px] h-auto text-center mb-10">
-              <h1 className="text-[36px] md:text-[48px] lg:text-[60px] font-semibold text-white leading-tight">
-                Expert Opinion
-              </h1>
-              <p className="mt-4 text-white font-semibold text-[18px] md:text-[24px] lg:text-[32px] leading-[1.5]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div> */}
-
-            {/* Image Grid */}
-            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-5"> */}
-              {/* Row 1 */}
-              {/* <div className="h-[200px] sm:h-[240px] md:h-[320px] w-full flex justify-center items-center">
-                <img
-                  src="/expertOpinion1.png"
-                  alt="Image 1"
-                  className="object-cover w-full h-full rounded-md"
-                />
-              </div> */}
-              {/* <div className="h-[200px] sm:h-[240px] md:h-[320px] w-full flex justify-center items-center">
-                <img
-                  src="/expertOpinion2.png"
-                  alt="Image 2"
-                  className="object-cover w-full h-full rounded-md"
-                />
-              </div> */}
-
-              {/* Row 2 */}
-              {/* <div className="h-[200px] sm:h-[240px] md:h-[320px] w-full flex justify-center items-center">
-                <img
-                  src="/expertOpinion3.png"
-                  alt="Image 3"
-                  className="object-cover w-full h-full rounded-md"
-                />
-              </div> */}
-              {/* <div className="h-[200px] sm:h-[240px] md:h-[320px] w-full flex justify-center items-center">
-                <img
-                  src="/expertOpinion4.png"
-                  alt="Image 4"
-                  className="object-cover w-full h-full rounded-md"
-                />
-              </div> */}
-            {/* </div> */}
-          {/* </div> */}
-        {/* </div> */}
-      </div>
-
-      {/* another component */}
-      <div className="w-full max-w-[90%] lg:max-w-[1303px] mx-auto h-auto flex flex-col">
-        {/* Background Section */}
-        <div className="w-full h-[200px] sm:h-[300px] lg:h-[330px] bg-[url('https://images.pexels.com/photos/7527874/pexels-photo-7527874.jpeg?auto=compress&cs=tinysrgb&w=600')] bg-cover bg-center">
-          {/* Content inside the background (if needed) */}
-        </div>
-
-        {/* Text Section */}
-        <div className="flex flex-col items-center justify-center px-4 py-8">
-          <div className="w-full max-w-[873px]">
-            {/* Heading */}
-            <p className="text-center text-[20px] sm:text-[28px] lg:text-[32px] text-[#172A44] leading-tight sm:leading-[40px] lg:leading-[56px] font-semibold">
-              Lorem ipsum dolor sit amet consectetur.
-            </p>
-
-            {/* Paragraph */}
-            <p className="text-center text-[#172A44] leading-relaxed text-[14px] sm:text-[16px] lg:text-[20px] mt-4">
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-              occaecat cupidatat non proident,
-            </p>
-          </div>
+          {/* Clients Section */}
         </div>
       </div>
+
+      <ClientCarousel />
 
       {/* image and box */}
-      <div className="w-full h-auto relative">
+      <div className="w-full h-auto relative my-[15px]">
         {/* Content Section */}
-        <Box />
+        <h1 className="text-[#172A44] text-center font-semibold text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px]">
+          Our Projects
+        </h1>
 
         {/* Background Image Section */}
         <div className="w-full h-[300px] sm:h-[400px] md:h-[550px] bg-[url('/group.png')] bg-cover bg-bottom">
@@ -481,43 +246,10 @@ export default function Home() {
         <div className="w-full max-w-[400px] h-[300px] sm:h-[350px] md:h-[400px] bg-[url('/groupImg.png')] bg-cover bg-center rounded-2xl hover:rounded-none hover:scale-105 transition-all ease-in-out duration-100"></div>
       </div>
 
-      {/* About us */}
-      <div className="w-full flex justify-center items-center px-4">
-        <div className="w-full max-w-[1118px] h-auto ">
-          {/* Heading */}
-          <h1 className="text-[32px] sm:text-[48px] lg:text-[60px] leading-[40px] sm:leading-[60px] lg:leading-[60px] text-center font-[600] text-[#172A44]">
-            About Us
-          </h1>
-
-          {/* Box */}
-          <div className="flex justify-center w-full my-8 sm:my-[80px]">
-            <div className="w-full max-w-[820px] h-auto flex justify-center items-center bg-[rgb(134,190,234)] border-[4px] border-[#172A44] p-6 rounded-lg">
-              <div className="w-full max-w-[737px]">
-                <h1 className="text-[24px] sm:text-[28px] lg:text-[32px] font-[600] leading-[40px] sm:leading-[48px] lg:leading-[56px] text-[#172A44] text-center">
-                  Lorem ipsum dolor sit amet, consectetur
-                </h1>
-                <p className="text-[14px] sm:text-[16px] lg:text-[20px] font-[500] text-center text-[#172A44] leading-[30px] sm:leading-[35px] lg:leading-[35px]">
-                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Image Section */}
-          <div className="flex justify-between flex-wrap gap-4 md:gap-8 my-8">
-            <div className="w-full sm:w-[508px] h-auto sm:h-[515px] bg-[url('/about1.png')] bg-cover bg-center rounded-lg"></div>
-            <div className="w-full sm:w-[508px] h-auto sm:h-[515px] bg-[url('/about2.png')] bg-cover bg-center border-2 rounded-lg"></div>
-          </div>
-
-          {/* Additional Sections */}
-          <OurExperts />
-          <Contact />
-          <GetInTouch />
-        </div>
-      </div>
+      {/* <OurExperts /> */}
+      <OurPartnerShip />
+      <Contact />
+      <GetInTouch />
     </div>
   );
 }

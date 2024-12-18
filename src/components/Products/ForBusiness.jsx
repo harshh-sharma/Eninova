@@ -19,7 +19,7 @@ const cardData = [
 
 const Card = ({ image, text }) => {
   return (
-    <div className='w-full md:w-[1160px] h-auto flex flex-col md:flex-row justify-center items-center gap-2 border-[4px] border-[#172A44] p-4'>
+    <div className='w-full md:w-[1160px] h-auto flex flex-col md:flex-row justify-center items-center gap-2 border-[4px] border-[#172A44] p-4 rounded-xl my-2'>
       <div className='w-full md:w-[220px] h-auto'>
         <Image
           src={image}
@@ -38,10 +38,10 @@ const ForBusiness = () => {
   return (
     <div className='flex flex-col w-full justify-center items-center'>
       <div className='w-full md:w-[1178px] h-auto flex flex-col justify-center items-center gap-[5px] p-4'>
-        <h1 className='text-[40px] sm:text-[60px] font-semibold text-center text-[#172A44] mb-6'>
+        {/* <h1 className='text-[40px] sm:text-[60px] font-semibold text-center text-[#172A44] mb-6'>
           For Business
         </h1>
-        <Box />
+        <Box /> */}
         {cardData?.map((item, index) => (
           <Card key={index} image={item?.image} text={item?.text} />
         ))}
