@@ -3,14 +3,14 @@ import { FaWifi } from "react-icons/fa";
 import { FiTv } from "react-icons/fi";
 import { HiSpeakerWave } from "react-icons/hi2";
 import Image from "next/image";
-import ClientCarousel from "../components/client";
+import ClientCarousel from "../components/Home/client";
 import OurExperts from "../components/Experts";
-import Contact from "../components/Contact";
-import GetInTouch from "../components/GetInTouch";
+import Contact from "../components/Home/Contact";
+import GetInTouch from "../components/Home/GetInTouch";
 import LastComp from "../components/LastComp";
 import Box from "@/components/Box";
-import Features from "@/components/Features";
-import OurPartnerShip from "@/components/OurPartnerShip";
+import Features from "@/components/Home/Features";
+import OurPartnerShip from "@/components/Home/OurPartnerShip";
 
 export default function Home() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
-import Box from './Box'
-import ForBusiness from './Products/ForBusiness'
+import Box from '../Box'
+import ForBusiness from '../Products/ForBusiness'
 
 const OurPartnership = () => {
   return (

@@ -1,6 +1,6 @@
-import Contact from '@/components/Contact'
+import Contact from '@/components/Home/Contact'
 import ContactForm from '@/components/ContactForm'
-import GetInTouch from '@/components/GetInTouch'
+import GetInTouch from '@/components/Home/GetInTouch'
 import React from 'react'
 
 const page = () => {
