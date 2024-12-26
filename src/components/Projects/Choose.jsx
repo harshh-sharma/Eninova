@@ -23,7 +23,7 @@ const tools1 = [
 
 const Choose = () => {
   return (
-    <div className="w-full max-w-[1440px] h-auto bg-[#4EB768] border-2 mt-[50px] flex flex-col px-4 py-6 rounded-lg shadow-lg">
+    <div className="w-full max-w-[1440px] h-auto bg-[#4EB768] border-2 mt-5 flex flex-col px-4 py-6 rounded-lg shadow-lg">
       {/* Title Section */}
       <h1 className="text-center text-[32px] font-semibold text-white mb-8">
         Why Choose Us?

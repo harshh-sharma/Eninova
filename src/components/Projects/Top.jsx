@@ -2,7 +2,7 @@ import React from 'react'
 
 const Top = () => {
   return (
-    <div className="flex justify-center items-center px-4 ">
+    <div className="flex justify-center items-center px-4">
       <div className="w-full max-w-[1179px] h-auto relative">
         {/* Title */}
         <div className="w-full flex justify-center items-center mb-4">
@@ -12,7 +12,7 @@ const Top = () => {
         </div>
 
         {/* Content Positioned at the Bottom */}
-        <div className="w-full h-auto border-[4px] border-[#172A44] bg-[#A8D6FF] flex justify-center items-center p-4">
+        <div className="w-full h-auto border-[4px] border-[#172A44] bg-[#A8D6FF] flex justify-center items-center p-4 rounded-xl">
           <div className="w-full max-w-[1058px] flex flex-col justify-center items-center space-y-4">
             <h1 className="text-[24px] sm:text-[28px] lg:text-[32px] leading-[1.2] text-center font-semibold text-[#172A44]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
