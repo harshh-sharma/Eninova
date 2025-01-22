@@ -206,7 +206,7 @@ export default function Home() {
         </div>
       </div>
 
-      <ClientCarousel />
+      {/* <ClientCarousel /> */}
 
       {/* image and box */}
       <div className="w-full h-auto relative my-[15px]">
