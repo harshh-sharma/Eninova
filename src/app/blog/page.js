@@ -4,6 +4,7 @@ import axiosInstance from "@/helper/axiosInstance";
 import React, { useEffect, useState } from "react";
 
 const BlogCard = ({ img, title, content }) => {
+
   return (
     <div className="w-full max-w-[983px] h-auto md:h-[640px] flex flex-col justify-center items-center relative mx-auto my-5">
       <div className="w-full h-auto bg-[#A8DCFF] flex flex-col justify-center items-center py-6 md:h-[451px] border-[3px] md:border-[5px] border-[#172A44] rounded-2xl">
@@ -94,18 +95,30 @@ const carouselItems = [
 const Page = () => {
   const [blogContent, setBlogContent] = useState([]);
 
-  const loadContents = async () => {
-    try {
-      const response = await axiosInstance.get(`domain/67554695d770ca907259c7e5`);
-      setBlogContent(response?.data?.contents);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+ 
+  const domainId = '678f9360190d9d0207264322';
+  const fetchContent = async () => {
+     try {
+      const response = await axiosInstance.get(`/website/${domainId}`);
+      const contents = response?.data?.data?.pages[0].sections[0]?.contents;
+      setBlogContent(contents);
+      console.log(contents[0]);
+      
+     } catch (error) {
+      console.log(error);
+      
+     }
+  }
 
   useEffect(() => {
-    loadContents();
-  }, []);
+     fetchContent();
+  },[])
+
+  const truncateText = (text, maxWords) => {
+    if (!text) return ""; // Handle empty or undefined text
+    const words = text.split(" ");
+    return words.length > maxWords ? words.slice(0, maxWords).join(" ") + "..." : text;
+  };
 
   return (
     <div className="flex flex-col">
@@ -117,9 +130,9 @@ const Page = () => {
         {blogContent?.map((item, index) => (
           <BlogCard
             key={index}
-            img={item?.contentImage?.secure_url}
+            img={item?.content_data?.image_url}
             title={item?.title}
-            content={item?.content}
+            content={truncateText(item?.content_data?.text, 40)} // Example: Limit to 20 words
           />
         ))}
 
