@@ -100,6 +100,8 @@ const Page = () => {
   const fetchContent = async () => {
      try {
       const response = await axiosInstance.get(`/website/${domainId}`);
+      console.log("res",response);
+      
       const contents = response?.data?.data?.pages[0].sections[0]?.contents;
       setBlogContent(contents);
       console.log(contents[0]);
