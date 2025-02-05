@@ -11,10 +11,6 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const handleMenuClick = () => {
-
-  }
-
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/Products', label: 'Products' },
