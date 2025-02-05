@@ -11,6 +11,10 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const handleMenuClick = () => {
+
+  }
+
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/Products', label: 'Products' },
@@ -150,6 +154,7 @@ const Navbar = () => {
                 <Link
                   key={link.href}
                   href={link.href}
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
                   className="text-[#172C47] hover:text-[#53BC69] transition duration-300 font-semibold"
                 >
                   {link.label}
